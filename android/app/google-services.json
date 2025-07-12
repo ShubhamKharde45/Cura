@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1097240028252",
+    "project_id": "cura-8d85c",
+    "storage_bucket": "cura-8d85c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097240028252:android:ebc6aa1b8fad19ff2d3299",
+        "android_client_info": {
+          "package_name": "com.app.cura"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcGZ6g7lk3QoVyxRjyIENc7yGQSRhEO8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
