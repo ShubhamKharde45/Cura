@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppContainer extends StatelessWidget {
@@ -6,54 +5,42 @@ class AppContainer extends StatelessWidget {
     super.key,
     this.height,
     required this.width,
-    required this.child,
+    this.child,
+    this.margine,
     this.padding,
-    this.color,
   });
 
   final double? height;
   final double width;
-  final Widget child;
+  final EdgeInsetsGeometry? margine;
   final EdgeInsetsGeometry? padding;
-  final Color? color;
+  final Widget? child;
+
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: height,
+      margin: margine,
       padding: padding,
-      height: height,
       width: width,
       decoration: BoxDecoration(
-        color: color ?? Colors.grey.shade900,
+        color: Color.fromARGB(255, 239, 244, 253),
         borderRadius: BorderRadius.circular(15),
-        border: Border.all(color: Colors.grey.shade600, width: 0.8),
-      ),
-      child: child,
-    );
-  }
-}
-
-class AppColorContainer extends StatelessWidget {
-  const AppColorContainer({
-    super.key,
-    this.height,
-    required this.width,
-    required this.child,
-    this.color,
-  });
-
-  final double? height;
-  final double width;
-  final Widget child;
-  final Color? color;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      width: width,
-      decoration: BoxDecoration(
-        color: color ?? Colors.green.withOpacity(0.9),
-        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.black.withOpacity(0.3), width: 0),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.shade400,
+            blurRadius: 15,
+            spreadRadius: 2,
+            offset: Offset(5, 5),
+          ),
+          BoxShadow(
+            color: Colors.grey.shade200,
+            blurRadius: 15,
+            spreadRadius: 2,
+            offset: Offset(-5, -5),
+          ),
+        ],
       ),
       child: child,
     );

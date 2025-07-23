@@ -1,4 +1,4 @@
-import 'package:cura/screens/appointment_screen.dart';
+import 'package:cura/screens/doctors_screen.dart';
 import 'package:cura/screens/home_screen.dart';
 import 'package:cura/screens/notifications_screen.dart';
 import 'package:cura/screens/profile_screen.dart';
@@ -14,10 +14,10 @@ class MainScreen extends ConsumerStatefulWidget {
 }
 
 class _MainScreenState extends ConsumerState<MainScreen> {
-  int selectedIndex = 0;
+  int selectedIndex = 1;
   final List<Widget> _screens = const [
     HomeScreen(),
-    AppointmentScreen(),
+    DoctorsScreen(),
     NotificationsScreen(),
     ProfileScreen(),
   ];
@@ -35,20 +35,44 @@ class _MainScreenState extends ConsumerState<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0,
         toolbarHeight: 70,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.blue.withOpacity(0),
         surfaceTintColor: Colors.transparent,
 
-        title: const Text(
-          'Cura',
-          style: TextStyle(
-            fontFamily: 'Pacifico',
-            fontSize: 30,
-            color: Colors.white,
-          ),
+        title: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Good morning',
+              style: TextStyle(
+                fontSize: 19,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Row(
+              children: [
+                Text(
+                  'welcome to',
+                  style: TextStyle(fontSize: 17, color: Colors.blue),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 5),
+                  child: Text(
+                    'Cura',
+                    style: TextStyle(
+                      fontFamily: 'Pacifico',
+                      fontSize: 20,
+                      color: Colors.blue,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
       body: Padding(

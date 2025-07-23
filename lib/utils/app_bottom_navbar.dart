@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppBottomNavbar extends StatelessWidget {
   final int selectedIndex;
-  final ValueChanged<int> onTabSelected;
+  final void Function(int) onTabSelected;
 
   const AppBottomNavbar({
     super.key,
@@ -21,7 +21,11 @@ class AppBottomNavbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           _navItem(icon: CupertinoIcons.home, label: 'Home', index: 0),
-          _navItem(icon: CupertinoIcons.calendar, label: 'Visit', index: 1),
+          _navItem(
+            icon: CupertinoIcons.profile_circled,
+            label: 'Doctors',
+            index: 1,
+          ),
           _navItem(icon: CupertinoIcons.bell, label: 'Updates', index: 2),
           _navItem(
             icon: CupertinoIcons.profile_circled,
@@ -46,7 +50,7 @@ class AppBottomNavbar extends StatelessWidget {
         height: 70,
         width: 90,
         decoration: BoxDecoration(
-          color: isSelected ? Colors.grey.shade900 : Colors.transparent,
+          color: isSelected ? Colors.blue.withOpacity(0.2) : Colors.transparent,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Column(
@@ -55,13 +59,13 @@ class AppBottomNavbar extends StatelessWidget {
             Icon(
               icon,
               size: 30,
-              color: isSelected ? Colors.green : Colors.white,
+              color: isSelected ? Colors.blue : Colors.black,
             ),
             Text(
               label,
               style: TextStyle(
                 fontSize: 13,
-                color: isSelected ? Colors.green : Colors.white,
+                color: isSelected ? Colors.blue : Colors.black,
               ),
             ),
           ],
