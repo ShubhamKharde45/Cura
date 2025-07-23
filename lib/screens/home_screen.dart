@@ -1,11 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:cura/services/db/database.dart';
-import 'package:cura/utils/app_container.dart';
+
 import 'package:cura/utils/doctors_list.dart';
 import 'package:cura/utils/home_box.dart';
 import 'package:cura/utils/hospital_card.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
