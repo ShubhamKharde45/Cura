@@ -186,7 +186,7 @@ class _LogInScreenState extends ConsumerState<LogInScreen> {
 
                       otpSent
                           ? AppInputField(
-                              hint: "Enter 4 digit OTP.",
+                              hint: "Enter 6 digit OTP.",
                               controller: _otpController,
                             )
                           : AppInputField(
